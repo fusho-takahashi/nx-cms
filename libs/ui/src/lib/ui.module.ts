@@ -8,6 +8,6 @@ import { PostListComponent } from './post-list/post-list.component';
 @NgModule({
   imports: [CommonModule, BrowserAnimationsModule, MatToolbarModule],
   declarations: [HeaderComponent, PostListComponent],
-  exports: [HeaderComponent]
+  exports: [HeaderComponent, PostListComponent]
 })
 export class UiModule {}
