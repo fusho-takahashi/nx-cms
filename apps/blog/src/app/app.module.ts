@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { RouterModule, Routes } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -25,6 +25,7 @@ const routes: Routes = [
     BrowserModule,
     RouterModule.forRoot(routes, { initialNavigation: 'enabled' }),
     BrowserAnimationsModule,
+    HttpClientModule,
     UiModule
   ],
   providers: [],

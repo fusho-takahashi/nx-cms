@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { PostMetaData } from '@nx-cms/model';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'nx-cms-posts',
@@ -8,15 +9,9 @@ import { PostMetaData } from '@nx-cms/model';
   styleUrls: ['./posts.component.scss']
 })
 export class PostsComponent implements OnInit {
-  constructor(private router: Router) {}
+  constructor(private router: Router, private http: HttpClient) {}
 
-  posts: PostMetaData[] = [
-    {
-      id: 1,
-      title: 'テスト投稿',
-      published: new Date('2020-02-23T08:55:28.087Z')
-    }
-  ];
+  readonly posts$ = this.http.get<PostMetaData[]>('/api/posts');
 
   ngOnInit(): void {}
 
