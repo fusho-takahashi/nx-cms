@@ -16,7 +16,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@nx-cms/model": ["libs/model/src/index.ts"]
+      "@nx-cms/model": ["libs/model/src/index.ts"],
+      "@nx-cms/ui": ["libs/ui/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
