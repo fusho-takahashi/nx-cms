@@ -1,1 +1,5 @@
 <h1>POSTS</h1>
+<nx-cms-post-list
+  [posts]="posts"
+  (selectList)="goToPost($event)"
+></nx-cms-post-list>

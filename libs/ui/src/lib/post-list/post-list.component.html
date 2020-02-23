@@ -1,1 +1,12 @@
-<p>post-list works!</p>
+<mat-list>
+  <button
+    mat-list-item
+    matRipple
+    *ngFor="let post of posts"
+    (click)="selectList.emit(post.id)"
+  >
+    <h4 mat-line>{{ post.title }}</h4>
+    <p mat-line class="mat-caption">{{ post.published | date }}</p>
+    <mat-divider></mat-divider>
+  </button>
+</mat-list>
