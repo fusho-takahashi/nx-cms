@@ -38,3 +38,9 @@ body {
   margin: 0;
   font-family: 'Noto Sans JP', 'Helvetica Neue', sans-serif;
 }
+
+$custom-typography: mat-typography-config(
+  $font-family: '"Noto Sans JP"'
+);
+
+@include angular-material-typography($custom-typography);
