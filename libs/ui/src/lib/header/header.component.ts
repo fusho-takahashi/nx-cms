@@ -1,4 +1,9 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  ChangeDetectionStrategy,
+  Input
+} from '@angular/core';
 
 @Component({
   selector: 'nx-cms-header',
@@ -7,10 +12,9 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HeaderComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
+  @Input() title: string;
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }
