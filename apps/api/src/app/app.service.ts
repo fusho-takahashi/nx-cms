@@ -33,8 +33,6 @@ export class AppService {
   }
 
   getPostDetail(id: number): PostDetail {
-    console.log(this.posts.find((post: PostDetail) => post.id === id));
-
     return this.posts.find((post: PostDetail) => post.id === id);
   }
 }
