@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { PostDetail } from '@nx-cms/model';
+import { ActivatedRoute } from '@angular/router';
+import { Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'nx-cms-post',
@@ -7,15 +10,15 @@ import { PostDetail } from '@nx-cms/model';
   styleUrls: ['./post.component.scss']
 })
 export class PostComponent implements OnInit {
-  constructor() {}
+  constructor(
+    private activatedRoute: ActivatedRoute,
+    private http: HttpClient
+  ) {}
 
-  post: PostDetail = {
-    id: 1,
-    title: 'テスト投稿',
-    published: new Date('2020-02-23T08:55:28.087Z'),
-    tags: ['Nx', 'Angular'],
-    article: ['皆さんこんにちは。', 'これはテスト投稿です。']
-  };
+  post$: Observable<PostDetail>;
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    const { snapshot } = this.activatedRoute;
+    this.post$ = this.http.get<PostDetail>(`/api/post/${snapshot.params.id}`);
+  }
 }
