@@ -2,16 +2,23 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { UiModule } from '@nx-cms/ui';
 import { PostsComponent } from './pages/posts/posts.component';
+
+const routes: Routes = [
+  {
+    path: '',
+    component: PostsComponent
+  }
+];
 
 @NgModule({
   declarations: [AppComponent, PostsComponent],
   imports: [
     BrowserModule,
-    RouterModule.forRoot([], { initialNavigation: 'enabled' }),
+    RouterModule.forRoot(routes, { initialNavigation: 'enabled' }),
     BrowserAnimationsModule,
     UiModule
   ],
