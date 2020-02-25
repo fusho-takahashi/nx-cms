@@ -18,4 +18,8 @@ export class PostedListComponent implements OnInit {
   goToPostEdit(id: number) {
     this.router.navigate(['post-edit', id]);
   }
+
+  goToNewPost() {
+    this.router.navigate(['new-post']);
+  }
 }
