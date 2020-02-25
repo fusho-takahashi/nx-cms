@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
+import { PostMetaData } from '@nx-cms/model';
 
 @Component({
   selector: 'nx-cms-posted-list',
@@ -6,10 +9,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./posted-list.component.scss']
 })
 export class PostedListComponent implements OnInit {
+  constructor(private router: Router, private http: HttpClient) {}
 
-  constructor() { }
+  public readonly posts$ = this.http.get<PostMetaData[]>('/api/posts');
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+
+  goToPostEdit(id: number) {
+    this.router.navigate(['post-edit', id]);
   }
-
 }

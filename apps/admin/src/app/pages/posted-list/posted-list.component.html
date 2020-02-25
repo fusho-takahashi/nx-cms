@@ -1,1 +1,6 @@
-<p>posted-list works!</p>
+<h1>POSTS</h1>
+<nx-cms-post-list
+  *ngIf="posts$ | async as posts"
+  [posts]="posts"
+  (selectList)="goToPostEdit($event)"
+></nx-cms-post-list>
