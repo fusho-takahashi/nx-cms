@@ -9,6 +9,7 @@ import { UiModule } from '@nx-cms/ui';
 import { PostedListComponent } from './pages/posted-list/posted-list.component';
 import { PostEditComponent } from './pages/post-edit/post-edit.component';
 import { NewPostComponent } from './pages/new-post/new-post.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 const routes: Routes = [
   {
@@ -37,6 +38,7 @@ const routes: Routes = [
     RouterModule.forRoot(routes, { initialNavigation: 'enabled' }),
     BrowserAnimationsModule,
     HttpClientModule,
+    ReactiveFormsModule,
     UiModule
   ],
   providers: [],

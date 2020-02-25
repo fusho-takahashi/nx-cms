@@ -35,4 +35,8 @@ export class AppService {
   getPostDetail(id: number): PostDetail {
     return this.posts.find((post: PostDetail) => post.id === id);
   }
+
+  addPost(post: PostDetail) {
+    this.posts.push(post);
+  }
 }

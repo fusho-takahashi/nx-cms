@@ -1,1 +1,9 @@
-<p>new-post works!</p>
+<h1>NEW POST</h1>
+<form [formGroup]="postForm" (ngSubmit)="onSubmit()">
+  <label>title: <input type="text" formControlName="title" required/></label>
+  <label>tags:<input type="text" formControlName="tags"/></label>
+  <label
+    >article<textarea type="text" formControlName="article"></textarea
+  ></label>
+  <button type="submit" [disabled]="!postForm.valid">Submit</button>
+</form>
