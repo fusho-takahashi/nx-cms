@@ -8,6 +8,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { UiModule } from '@nx-cms/ui';
 import { PostedListComponent } from './pages/posted-list/posted-list.component';
 import { PostEditComponent } from './pages/post-edit/post-edit.component';
+import { NewPostComponent } from './pages/new-post/new-post.component';
 
 const routes: Routes = [
   {
@@ -21,7 +22,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [AppComponent, PostedListComponent, PostEditComponent],
+  declarations: [AppComponent, PostedListComponent, PostEditComponent, NewPostComponent],
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes, { initialNavigation: 'enabled' }),
