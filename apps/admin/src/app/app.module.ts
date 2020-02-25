@@ -18,11 +18,20 @@ const routes: Routes = [
   {
     path: 'post-edit/:id',
     component: PostEditComponent
+  },
+  {
+    path: 'new-post',
+    component: NewPostComponent
   }
 ];
 
 @NgModule({
-  declarations: [AppComponent, PostedListComponent, PostEditComponent, NewPostComponent],
+  declarations: [
+    AppComponent,
+    PostedListComponent,
+    PostEditComponent,
+    NewPostComponent
+  ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes, { initialNavigation: 'enabled' }),
