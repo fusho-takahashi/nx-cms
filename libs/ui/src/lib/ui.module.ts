@@ -6,6 +6,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatListModule } from '@angular/material/list';
 import { MatRippleModule } from '@angular/material/core';
 import { PostListComponent } from './post-list/post-list.component';
+import { ButtonComponent } from './button/button.component';
 
 @NgModule({
   imports: [
@@ -15,7 +16,7 @@ import { PostListComponent } from './post-list/post-list.component';
     MatListModule,
     MatRippleModule
   ],
-  declarations: [HeaderComponent, PostListComponent],
+  declarations: [HeaderComponent, PostListComponent, ButtonComponent],
   exports: [HeaderComponent, PostListComponent]
 })
 export class UiModule {}
