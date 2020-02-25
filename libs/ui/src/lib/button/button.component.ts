@@ -1,4 +1,11 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  ChangeDetectionStrategy,
+  Input,
+  Output,
+  EventEmitter
+} from '@angular/core';
 
 @Component({
   selector: 'nx-cms-button',
@@ -7,10 +14,10 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ButtonComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
+  @Input() label: string;
+  @Output() clickAction: EventEmitter<void> = new EventEmitter<void>();
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

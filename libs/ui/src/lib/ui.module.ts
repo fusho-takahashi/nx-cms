@@ -5,6 +5,7 @@ import { HeaderComponent } from './header/header.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatListModule } from '@angular/material/list';
 import { MatRippleModule } from '@angular/material/core';
+import { MatButtonModule } from '@angular/material/button';
 import { PostListComponent } from './post-list/post-list.component';
 import { ButtonComponent } from './button/button.component';
 
@@ -14,9 +15,10 @@ import { ButtonComponent } from './button/button.component';
     BrowserAnimationsModule,
     MatToolbarModule,
     MatListModule,
-    MatRippleModule
+    MatRippleModule,
+    MatButtonModule
   ],
   declarations: [HeaderComponent, PostListComponent, ButtonComponent],
-  exports: [HeaderComponent, PostListComponent]
+  exports: [HeaderComponent, PostListComponent, ButtonComponent]
 })
 export class UiModule {}
