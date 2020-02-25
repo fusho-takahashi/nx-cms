@@ -14,7 +14,7 @@ const routes: Routes = [
     component: PostedListComponent
   },
   {
-    path: 'post/:id',
+    path: 'post-edit/:id',
     component: PostEditComponent
   }
 ];
