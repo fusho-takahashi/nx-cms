@@ -5,9 +5,10 @@ import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { UiModule } from '@nx-cms/ui';
+import { PostedListComponent } from './pages/posted-list/posted-list.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, PostedListComponent],
   imports: [
     BrowserModule,
     RouterModule.forRoot([], { initialNavigation: 'enabled' }),
